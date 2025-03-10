@@ -1,0 +1,12 @@
+nx-arangodb 
+networkx 
+adbnx_adapter 
+pyvis
+langchain 
+langgraph 
+langchain_openai 
+langchain_anthropic 
+langchain_community
+python-dotenv
+streamlit
+pandas

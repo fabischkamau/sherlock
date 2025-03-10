@@ -1,0 +1,15 @@
+services:
+  arangodb:
+    image: arangodb/arangodb:3.12.4
+    ports:
+      - "8529:8529"
+    environment:
+      - ARANGO_ROOT_PASSWORD=openSesame
+    command: arangod --experimental-vector-index=true
+    volumes:
+      - arangodb_data:/var/lib/arangodb3
+      - arangodb_apps:/var/lib/arangodb3-apps
+
+volumes:
+  arangodb_data:
+  arangodb_apps:
