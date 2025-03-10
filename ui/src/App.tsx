@@ -9,7 +9,6 @@ import { SendIcon, StopIcon, BotIcon } from "./components/Icons"
 // Import the MessageDebug component
 import { MessageDebug } from "./Messagedebug"
 // Import the ConnectionStatus component
-import { ConnectionStatus } from "./ConnectionStatus"
 
 // Add the API URL as a constant at the top of the file
 const API_URL = "http://127.0.0.1:2024"
@@ -61,7 +60,6 @@ export default function App() {
   // Add the ConnectionStatus component at the top of the App component's return
   return (
     <div className="flex flex-col h-screen bg-gradient-to-br from-indigo-50 to-purple-50 p-4 md:p-6">
-      <ConnectionStatus apiUrl={API_URL} />
 
       <header className="flex items-center gap-3 py-4 border-b border-purple-100 mb-4">
         <BotIcon className="w-8 h-8 text-purple-600" />
@@ -79,7 +77,7 @@ export default function App() {
             <p className="text-purple-600 max-w-md">Ask me anything and I'll do my best to help you!</p>
           </div>
         ) : (
-          <div className="space-y-4 p-2">
+          <div className="space-y-4 p-2 prose">
             {thread.messages.map((message, index) => (
               <MessageBubble
                 key={message.id || index}
